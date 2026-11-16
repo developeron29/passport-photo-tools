@@ -200,14 +200,19 @@ footer { color: var(--ink-2); font-size: 14px; border-top: 1px solid var(--line)
 [hidden] { display: none !important; }
 .card#out > canvas { width: min(100%, 420px); }
 
-/* Top call to action on every page */
-a.topcta {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap;
-  background: linear-gradient(135deg, var(--navy), #13377a); color: #dfe7f7; text-decoration: none;
-  border-left: 5px solid var(--gold); border-radius: 14px; padding: 18px 24px; margin: 8px 8px 32px; font-size: 15px;
-  outline: 3px dotted var(--gold); outline-offset: 8px;
-  box-shadow: var(--shadow);
+
+/* Adaptive call to action at the top of each page */
+.cta.top { margin: 0 0 28px; }
+.cta.top #cta-text { display: block; margin: 2px 0 14px; max-width: 760px; }
+.cta.top #cta-link {
+  display: inline-block; color: var(--navy); background: var(--gold); text-decoration: none;
+  font-weight: 800; padding: 9px 16px; border-radius: 999px;
 }
-a.topcta strong { color: #fff; }
-a.topcta .go { color: var(--navy); background: var(--gold); font-weight: 800; padding: 7px 14px; border-radius: 999px; white-space: nowrap; }
-a.topcta:hover .go { filter: brightness(1.05); }
+.cta.top #cta-link::after { content: " →"; }
+.cta.top #cta-link:hover { filter: brightness(1.05); }
+/* Basic call to action at the bottom */
+.cta.basic { background: var(--surface); color: var(--ink-2); border: 1px solid var(--line); border-left: 5px solid var(--blue); }
+.cta.basic strong { color: var(--ink); }
+.cta.basic a { color: var(--blue); }
+/* GitHub link in the header */
+header.site a.gh { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); border: 1px solid var(--line); }

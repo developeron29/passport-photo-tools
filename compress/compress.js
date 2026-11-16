@@ -18,7 +18,22 @@ $('file').addEventListener('change', async () => {
     status.textContent = 'This browser can’t open that file. If it’s an iPhone HEIC photo, export it as JPEG first.';
   }
 });
+const DOCS = {
+  '240|1200': ['/united-states/visa-photo', 'United States visa (DS-160)'],
+  '240|600': ['/united-states/dv-lottery-photo', 'DV lottery'],
+  '200|900': ['/india/oci-photo', 'India OCI card'],
+  '120|': ['/china/visa-photo', 'China visa'],
+  '20|276': ['/india/pan-card-photo', 'India PAN card'],
+};
+const an = (w) => (/^[AEIOU]/i.test(w) ? 'an' : 'a');
+function updateCta() {
+  const d = DOCS[$('preset').value];
+  window.setCta?.(d
+    ? { text: `Compressing doesn’t fix the crop or head size. visaphotos.app makes ${an(d[1])} ${d[1]} photo to the exact rules, with a free preview.`, path: d[0], label: `Make ${an(d[1])} ${d[1]} photo` }
+    : { text: 'Compressing doesn’t fix the crop or head size. visaphotos.app makes the photo to the exact rules for 151 documents, with a free preview.', path: '/', label: 'Make a compliant photo' });
+}
 $('preset').addEventListener('change', () => {
+  updateCta();
   $('custom').hidden = $('preset').value !== 'custom';
   if (img) run();
 });

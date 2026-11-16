@@ -26,6 +26,11 @@ function preset() {
 function showRule() {
   $('custom').hidden = $('preset').value !== 'custom';
   $('rule').textContent = preset().note;
+  const p = preset();
+  const short = (p.name || '').replace(/\s*\(.*\)\s*/, '');
+  window.setCta?.(p.id === 'custom'
+    ? { title: 'Need the photo for your form too?', text: 'visaphotos.app has photo and signature resizers for SSC, IBPS, SBI, UPSC, NEET, JEE, RRB and CUET.', path: '/tools', label: 'See the exam photo tools' }
+    : { title: `Need the photo for ${short} too?`, text: `visaphotos.app resizes the photo and signature to the ${short} rules.`, path: `/exam-photo/${p.id}`, label: `Make the ${short} photo` });
 }
 showRule();
 $('preset').addEventListener('change', () => { showRule(); if (img) run(); });

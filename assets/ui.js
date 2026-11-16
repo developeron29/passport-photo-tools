@@ -30,3 +30,13 @@ for (const input of document.querySelectorAll('input[type="file"]')) {
     input.dispatchEvent(new Event('change'));
   });
 }
+
+/** Point the top call-to-action at a specific visaphotos.app page. */
+window.setCta = ({ title, text, path, label }) => {
+  const link = document.getElementById('cta-link');
+  if (!link) return;
+  if (title) document.getElementById('cta-title').textContent = title;
+  if (text) document.getElementById('cta-text').textContent = text;
+  link.href = `https://visaphotos.app${path}?utm_source=github&utm_medium=referral&utm_campaign=${link.dataset.camp}`;
+  link.textContent = label;
+};
