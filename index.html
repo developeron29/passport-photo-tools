@@ -3,38 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Free Passport Photo Tools – Checker, Compressor, 4x6 Sheet</title>
-  <meta name="description" content="Free, open-source passport photo tools that run in your browser: check a photo against the rules, compress it under an upload limit, and make a 4x6 print sheet.">
+  <title>Free Passport Photo Tools – Checker, DS-160, HEIC, Signature</title>
+  <meta name="description" content="Free, open-source passport photo tools that run in your browser: photo checker, DS-160 photo fixer, compressor, HEIC to JPG, signature resizer, baby photo checker and 4x6 print sheet.">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <meta property="og:image" content="https://developeron29.github.io/passport-photo-tools/assets/icon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header class="site">
-    <a class="home" href="./">Passport Photo Tools</a>
+    <a class="home" href="./"><img src="assets/logo-96.png" alt="" width="32" height="32">Passport Photo Tools</a>
     <a href="checker/">Checker</a>
     <a href="compress/">Compressor</a>
-    <a href="print-sheet/">4x6 print sheet</a>
+    <a href="print-sheet/">4x6 sheet</a>
+    <a href="signature/">Signature</a>
+    <a href="heic-to-jpg/">HEIC to JPG</a>
+    <a href="ds-160-photo/">DS-160 photo</a>
+    <a href="baby-photo/">Baby photo</a>
   </header>
   <main>
-    <h1>Free passport photo tools</h1>
-    <p class="lead">Three small tools for the parts of a passport or visa photo that usually go wrong. They run entirely in your browser: your photo is never uploaded. The code is open source.</p>
+    <section class="hero corners">
+      <span class="eyebrow">Free · open source · nothing is uploaded</span>
+      <h1>Get your passport photo accepted the first time</h1>
+      <p class="lead">Seven small tools for the parts of a passport, visa or form photo that usually go wrong: size, file limits, format, signatures and baby photos. They run entirely in your browser.</p>
+      <img class="mark" src="assets/logo-440.png" alt="" width="220" height="220">
+    </section>
 
     <div class="tools">
-      <div class="card">
-        <h2><a href="checker/">Photo checker</a></h2>
-        <p>Check pixel size, shape, file size, format, background and head position against the rules for 25 documents, including the DS-160, UK online passport and OCI.</p>
-      </div>
-      <div class="card">
-        <h2><a href="compress/">Compress to a size limit</a></h2>
-        <p>Get a photo under 240 KB (DS-160), 200 KB (OCI), 20 KB (PAN) or any limit, without changing its shape.</p>
-      </div>
-      <div class="card">
-        <h2><a href="print-sheet/">4x6 print sheet</a></h2>
-        <p>Tile a 2x2 inch or 35x45 mm photo onto a 4x6 inch sheet with cut lines, ready to print at any photo counter.</p>
-      </div>
+      <a class="tool" href="checker/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></span>
+        <h2>Photo checker</h2>
+        <p>Size, shape, file size, background and head position for 25 documents.</p>
+        <span class="go">Check a photo →</span>
+      </a>
+      <a class="tool" href="ds-160-photo/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="12" cy="10" r="2.6"/><path d="M7.5 17c1-2 2.6-3 4.5-3s3.5 1 4.5 3"/></svg></span>
+        <h2>DS-160 photo fixer</h2>
+        <p>Crops square with the head at 50–69%, 600 x 600 px, under 240 KB.</p>
+        <span class="go">Fix my DS-160 photo →</span>
+      </a>
+      <a class="tool" href="compress/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg></span>
+        <h2>Compress to a limit</h2>
+        <p>Under 240 KB, 200 KB, 20 KB or any size, without changing the shape.</p>
+        <span class="go">Compress a photo →</span>
+      </a>
+      <a class="tool" href="heic-to-jpg/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/><path d="M3 12h3M18 12h3"/></svg></span>
+        <h2>HEIC to JPG</h2>
+        <p>Convert iPhone photos to the JPEG that forms accept, several at once.</p>
+        <span class="go">Convert photos →</span>
+      </a>
+      <a class="tool" href="signature/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c2.5-4 4-9 6-9 1.5 0-.5 8 1 8 1.2 0 2-3 3.2-3 1 0 .8 2 2 2 .9 0 1.8-1 2.8-1.5"/><path d="M3 20.5h18"/></svg></span>
+        <h2>Signature resizer</h2>
+        <p>140 x 60 px, 10–20 KB and other sizes for SBI, IBPS, SSC, UPSC, RRB, NEET.</p>
+        <span class="go">Resize a signature →</span>
+      </a>
+      <a class="tool" href="baby-photo/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M9 11h.01M15 11h.01"/><path d="M9.5 15c1.5 1 3.5 1 5 0"/><path d="M12 4c-1 1.5 0 3 1.5 2.5"/></svg></span>
+        <h2>Baby photo checker</h2>
+        <p>US rules for babies and children: one face, white sheet, no shadows.</p>
+        <span class="go">Check a baby photo →</span>
+      </a>
+      <a class="tool" href="print-sheet/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M9 5v14M15 5v14M3 12h18"/></svg></span>
+        <h2>4x6 print sheet</h2>
+        <p>Tile a 2x2 in or 35x45 mm photo on a 4x6 sheet with cut lines.</p>
+        <span class="go">Make a print sheet →</span>
+      </a>
     </div>
 
     <div class="card cta">
-      <strong>Need the whole photo made for you?</strong>
+      <strong>Want the whole photo made for you?</strong>
       <a href="https://visaphotos.app/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=tools-home">visaphotos.app</a> crops, sizes and checks a photo for 151 passport, visa and ID documents, with rules taken from official sources. Free preview; the download is paid.
     </div>
 
@@ -43,5 +87,6 @@
       Photo rules are maintained by <a href="https://visaphotos.app/how-we-check-the-rules?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=tools-home">visaphotos.app</a>. Checks are estimates; the issuing authority makes the final decision.
     </footer>
   </main>
+  <script type="module" src="assets/ui.js"></script>
 </body>
 </html>

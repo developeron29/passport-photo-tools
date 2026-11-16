@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DS-160 Photo Fixer – 600x600 px, Under 240 KB, Free</title>
+  <meta name="description" content="Fix a DS-160 photo upload in one step: crops your photo square with the head at 50–69% of the height, resizes to 600x600 px and saves a JPEG under 240 KB. Free, in your browser.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icon-32.png">
+  <link rel="apple-touch-icon" href="../assets/icon-180.png">
+  <meta property="og:image" content="https://developeron29.github.io/passport-photo-tools/assets/icon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site">
+    <a class="home" href="../"><img src="../assets/logo-96.png" alt="" width="32" height="32">Passport Photo Tools</a>
+    <a href="../checker/">Checker</a>
+    <a href="../compress/">Compressor</a>
+    <a href="../print-sheet/">4x6 sheet</a>
+    <a href="../signature/">Signature</a>
+    <a href="../heic-to-jpg/">HEIC to JPG</a>
+    <a href="../ds-160-photo/">DS-160 photo</a>
+    <a href="../baby-photo/">Baby photo</a>
+  </header>
+  <main>
+    <span class="eyebrow">Free tool · runs in your browser</span>
+    <h1>DS-160 photo fixer</h1>
+    <p class="lead">The DS-160 refuses photos that aren't square, are under 600 x 600 px, are over 240 KB, or have the head the wrong size. Add a front-facing photo and this finds your face, crops it square with the head at the right size, and saves a JPEG that fits. Nothing is uploaded.</p>
+
+    <div class="card">
+      <label for="file">Your photo</label>
+      <input id="file" type="file" accept="image/*">
+      <label for="head">Head size: <span id="headv">60</span>% of the height (allowed 50–69%)</label>
+      <input id="head" type="range" min="52" max="67" value="60">
+      <p class="status" id="status"></p>
+    </div>
+
+    <div class="row" id="out" hidden>
+      <div class="card">
+        <canvas id="result"></canvas>
+      </div>
+      <div class="card">
+        <ul class="checks" id="checks"></ul>
+        <p><a class="button" id="download" download="ds160-photo.jpg">Download DS-160 photo</a></p>
+        <p class="detail">This crops and resizes only; it doesn't change your face or the background. A plain white or off-white background and no glasses are still required.</p>
+      </div>
+    </div>
+
+    <h2>DS-160 photo rules</h2>
+    <ul>
+      <li>Square JPEG, 600 x 600 to 1200 x 1200 px, 240 KB or less</li>
+      <li>Head 50–69% of the image height (chin to top of hair)</li>
+      <li>Plain white or off-white background, no glasses, taken in the last 6 months</li>
+    </ul>
+    <p class="detail">From the U.S. Department of State's photo and digital image requirements. If the upload still fails, the DS-160 FAQ says to bring one printed photo with your confirmation page to the interview.</p>
+
+    <div class="card cta">
+      <strong>Background not white, or want it checked?</strong>
+      <a href="https://visaphotos.app/united-states/visa-photo?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=ds160-fixer">visaphotos.app</a> checks the whole DS-160 photo and can add a 4x6 print sheet for the interview.
+    </div>
+
+    <footer>
+      Open source on <a href="https://github.com/developeron29/passport-photo-tools">GitHub</a>. Made by <a href="https://visaphotos.app/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=ds160-footer">visaphotos.app</a>.
+    </footer>
+  </main>
+  <script type="module" src="ds160.js"></script>
+  <script type="module" src="../assets/ui.js"></script>
+</body>
+</html>

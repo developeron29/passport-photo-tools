@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HEIC to JPG Converter – Free, No Upload (iPhone Photos)</title>
+  <meta name="description" content="Convert iPhone HEIC photos to JPG in your browser, for passport, visa and form uploads that only accept JPEG. Free, private, nothing is uploaded.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icon-32.png">
+  <link rel="apple-touch-icon" href="../assets/icon-180.png">
+  <meta property="og:image" content="https://developeron29.github.io/passport-photo-tools/assets/icon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site">
+    <a class="home" href="../"><img src="../assets/logo-96.png" alt="" width="32" height="32">Passport Photo Tools</a>
+    <a href="../checker/">Checker</a>
+    <a href="../compress/">Compressor</a>
+    <a href="../print-sheet/">4x6 sheet</a>
+    <a href="../signature/">Signature</a>
+    <a href="../heic-to-jpg/">HEIC to JPG</a>
+    <a href="../ds-160-photo/">DS-160 photo</a>
+    <a href="../baby-photo/">Baby photo</a>
+  </header>
+  <main>
+    <span class="eyebrow">Free tool · runs in your browser</span>
+    <h1>HEIC to JPG converter</h1>
+    <p class="lead">iPhones save photos as HEIC, and most passport, visa and exam forms only accept JPEG. Convert one or more HEIC photos to JPG here. The conversion runs in your browser, so your photos stay on your device.</p>
+
+    <div class="card">
+      <label for="file">HEIC photos</label>
+      <input id="file" type="file" accept=".heic,.heif,image/heic,image/heif" multiple>
+      <p class="status" id="status"></p>
+    </div>
+
+    <div id="out"></div>
+
+    <h2>Avoid HEIC next time</h2>
+    <p>On iPhone, go to Settings, Camera, Formats and choose <em>Most Compatible</em>. New photos are then saved as JPEG.</p>
+
+    <div class="card cta">
+      <strong>Converting it for a passport or visa form?</strong>
+      Most forms also limit the size and crop. <a href="https://visaphotos.app/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=heic">visaphotos.app</a> makes the photo to the exact rules for 151 documents, with a free preview.
+    </div>
+
+    <footer>
+      Open source on <a href="https://github.com/developeron29/passport-photo-tools">GitHub</a>. Uses <a href="https://github.com/alexcorvi/heic2any">heic2any</a>. Made by <a href="https://visaphotos.app/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=heic-footer">visaphotos.app</a>.
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+  <script type="module" src="heic.js"></script>
+  <script type="module" src="../assets/ui.js"></script>
+</body>
+</html>
