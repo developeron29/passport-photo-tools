@@ -199,3 +199,14 @@ footer { color: var(--ink-2); font-size: 14px; border-top: 1px solid var(--line)
 
 [hidden] { display: none !important; }
 .card#out > canvas { width: min(100%, 420px); }
+
+/* Top call to action on every page */
+a.topcta {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; flex-wrap: wrap;
+  background: linear-gradient(135deg, var(--navy), #13377a); color: #dfe7f7; text-decoration: none;
+  border-left: 5px solid var(--gold); border-radius: 14px; padding: 12px 18px; margin: 0 0 24px; font-size: 15px;
+  box-shadow: var(--shadow);
+}
+a.topcta strong { color: #fff; }
+a.topcta .go { color: var(--navy); background: var(--gold); font-weight: 800; padding: 7px 14px; border-radius: 999px; white-space: nowrap; }
+a.topcta:hover .go { filter: brightness(1.05); }
