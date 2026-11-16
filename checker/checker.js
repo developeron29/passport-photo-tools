@@ -52,7 +52,7 @@ updateCta();
 function updateCta() {
   const spec = SPECS.find((s) => s.id === docSel.value);
   $('cta-text').textContent = `visaphotos.app crops and sizes your photo to the ${spec.name} rules, with a free preview.`;
-  $('cta-link').href = makerUrl(spec, 'checker-top');
+  $('cta-link').href = makerUrl(spec, 'checker-bottom');
   $('cta-link').textContent = `Make ${/^[AEIOU]/i.test(spec.name) ? 'an' : 'a'} ${spec.name} photo`;
 }
 
